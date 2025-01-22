@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - FitnessTracker</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+</head>
+<body>
+<header>
+    <nav>
+        <a asp-area="" asp-controller="Home" asp-action="Index">Profile</a>
+        <a asp-area="" asp-controller="Home" asp-action="Index">Activity Tracking</a>
+        <a asp-area="" asp-controller="Home" asp-action="Index">Progress Report</a>
+    </nav>
+</header>
+<div>
+    <main role="main">
+        @RenderBody()
+    </main>
+</div>
+<footer>
+    <div>
+        &copy; 2025 - FitnessTracker - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+</footer>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
